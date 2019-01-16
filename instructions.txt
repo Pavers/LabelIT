@@ -2,7 +2,9 @@
 - Create the folder C:\helpers
 - Copy in the Microsoft.Sqlhelper.dll
 - Open the solution file in bin\LabelIt.sln
-- The solution should build
+- Build the solution
+- Click save on the setup screen without changing any of the details
+- Build the solution again
 - Once the form opens, click the Labels menu > Print Labels
 - In the barcode field, enter 00001234 and click Search/press enter
 - Data should load underneath the barcode box

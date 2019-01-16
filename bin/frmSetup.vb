@@ -100,7 +100,7 @@ Public Class frmSetup
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(272, 20)
         Me.TextBox1.TabIndex = 1
-        Me.TextBox1.Text = "http://130.40.1.163/LabelService/LSX.asmx"
+        Me.TextBox1.Text = "http://212.250.100.5/LabelService/LSX.asmx"
         '
         'Label2
         '
@@ -124,7 +124,7 @@ Public Class frmSetup
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(272, 20)
         Me.TextBox2.TabIndex = 4
-        Me.TextBox2.Text = "\\130.40.1.86\sato"
+        Me.TextBox2.Text = ""
         '
         'Button1
         '
