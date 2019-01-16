@@ -1,0 +1,1153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/LabelService/LSX" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/LabelService/LSX" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This webservice contains all database functions required to operate the label it platform</wsdl:documentation>
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/LabelService/LSX">
+      <s:element name="GetDeliveryDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DespatchDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDeliveryDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDeliveryDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManualDeliveryDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DespatchDate" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetManualDeliveryDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetManualDeliveryDetailsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="isConnectionActive">
+        <s:complexType />
+      </s:element>
+      <s:element name="isConnectionActiveResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="isConnectionActiveResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBarcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Barcode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBarcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckBarcodeResult" type="tns:Product" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Product">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="ResponseCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="ResponseMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Colour" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Size" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="qty" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="RRP" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="Was" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="CheckBarcodeEuro">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Barcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckBarcodeEuroResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckBarcodeEuroResult" type="tns:Product" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBarcodesByProductName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBarcodesByProductNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBarcodesByProductNameResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CheckService">
+        <s:complexType />
+      </s:element>
+      <s:element name="CheckServiceResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="CheckServiceResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchProductWildcards">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ProductName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SearchProductWildcardsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SearchProductWildcardsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLabelFormats">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetLabelFormatsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLabelFormatsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLabelFormatsByType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FormatType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLabelFormatsByTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLabelFormatsByTypeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLabelFormatType">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LabelID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getLabelFormatTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="getLabelFormatTypeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLabelFormat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FormatID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLabelFormatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLabelFormatResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLabelFormatImage">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FormatID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLabelFormatImageResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetLabelFormatImageResult" type="tns:ImageData" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ImageData">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Result" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Data" type="s:base64Binary" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetLabelFormatName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FormatID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLabelFormatNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLabelFormatNameResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertFormat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FormatImageID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormatName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Format" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FormatType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsertFormatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InsertFormatResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFormat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FormatID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="FormatName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="format" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="FormatType" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdateFormatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpdateFormatResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFormat">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="FormatID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFormatResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="DeleteFormatResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReductions">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LastReductionID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="BranchCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReductionsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReductionsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReductionDetail">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReductionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReductionDetailResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReductionDetailResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReductionWithStockByBranch">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReductionID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReductionWithStockByBranchResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReductionWithStockByBranchResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReductionWithStockByBranchWithAltCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="ReductionID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="branchCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="AltCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReductionWithStockByBranchWithAltCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReductionWithStockByBranchWithAltCodeResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRmisReductionIDFromReductionName">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RmisReduction" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRmisReductionIDFromReductionNameResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetRmisReductionIDFromReductionNameResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReductionSheetNumbers">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="LastReductionID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetReductionSheetNumbersResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetReductionSheetNumbersResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBranchStockFromBarcode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="Barcode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Branch" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetBranchStockFromBarcodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetBranchStockFromBarcodeResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetDeliveryDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDeliveryDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetDeliveryDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDeliveryDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetManualDeliveryDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetManualDeliveryDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetManualDeliveryDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetManualDeliveryDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="isConnectionActiveSoapIn">
+    <wsdl:part name="parameters" element="tns:isConnectionActive" />
+  </wsdl:message>
+  <wsdl:message name="isConnectionActiveSoapOut">
+    <wsdl:part name="parameters" element="tns:isConnectionActiveResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckBarcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckBarcode" />
+  </wsdl:message>
+  <wsdl:message name="CheckBarcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckBarcodeEuroSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckBarcodeEuro" />
+  </wsdl:message>
+  <wsdl:message name="CheckBarcodeEuroSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckBarcodeEuroResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBarcodesByProductNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBarcodesByProductName" />
+  </wsdl:message>
+  <wsdl:message name="GetBarcodesByProductNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBarcodesByProductNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="CheckServiceSoapIn">
+    <wsdl:part name="parameters" element="tns:CheckService" />
+  </wsdl:message>
+  <wsdl:message name="CheckServiceSoapOut">
+    <wsdl:part name="parameters" element="tns:CheckServiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="SearchProductWildcardsSoapIn">
+    <wsdl:part name="parameters" element="tns:SearchProductWildcards" />
+  </wsdl:message>
+  <wsdl:message name="SearchProductWildcardsSoapOut">
+    <wsdl:part name="parameters" element="tns:SearchProductWildcardsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLabelFormatsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLabelFormats" />
+  </wsdl:message>
+  <wsdl:message name="GetLabelFormatsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLabelFormatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLabelFormatsByTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLabelFormatsByType" />
+  </wsdl:message>
+  <wsdl:message name="GetLabelFormatsByTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLabelFormatsByTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="getLabelFormatTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:getLabelFormatType" />
+  </wsdl:message>
+  <wsdl:message name="getLabelFormatTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:getLabelFormatTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLabelFormatSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLabelFormat" />
+  </wsdl:message>
+  <wsdl:message name="GetLabelFormatSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLabelFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLabelFormatImageSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLabelFormatImage" />
+  </wsdl:message>
+  <wsdl:message name="GetLabelFormatImageSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLabelFormatImageResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLabelFormatNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLabelFormatName" />
+  </wsdl:message>
+  <wsdl:message name="GetLabelFormatNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLabelFormatNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsertFormatSoapIn">
+    <wsdl:part name="parameters" element="tns:InsertFormat" />
+  </wsdl:message>
+  <wsdl:message name="InsertFormatSoapOut">
+    <wsdl:part name="parameters" element="tns:InsertFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFormatSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdateFormat" />
+  </wsdl:message>
+  <wsdl:message name="UpdateFormatSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdateFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFormatSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFormat" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFormatSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFormatResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReductionsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReductions" />
+  </wsdl:message>
+  <wsdl:message name="GetReductionsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReductionsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReductionDetailSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReductionDetail" />
+  </wsdl:message>
+  <wsdl:message name="GetReductionDetailSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReductionDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReductionWithStockByBranchSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReductionWithStockByBranch" />
+  </wsdl:message>
+  <wsdl:message name="GetReductionWithStockByBranchSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReductionWithStockByBranchResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReductionWithStockByBranchWithAltCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReductionWithStockByBranchWithAltCode" />
+  </wsdl:message>
+  <wsdl:message name="GetReductionWithStockByBranchWithAltCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReductionWithStockByBranchWithAltCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRmisReductionIDFromReductionNameSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRmisReductionIDFromReductionName" />
+  </wsdl:message>
+  <wsdl:message name="GetRmisReductionIDFromReductionNameSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRmisReductionIDFromReductionNameResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetReductionSheetNumbersSoapIn">
+    <wsdl:part name="parameters" element="tns:GetReductionSheetNumbers" />
+  </wsdl:message>
+  <wsdl:message name="GetReductionSheetNumbersSoapOut">
+    <wsdl:part name="parameters" element="tns:GetReductionSheetNumbersResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchStockFromBarcodeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBranchStockFromBarcode" />
+  </wsdl:message>
+  <wsdl:message name="GetBranchStockFromBarcodeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBranchStockFromBarcodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="LSXSoap">
+    <wsdl:operation name="GetDeliveryDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a dataset containing all items delivered on a specific date to a single store</wsdl:documentation>
+      <wsdl:input message="tns:GetDeliveryDetailsSoapIn" />
+      <wsdl:output message="tns:GetDeliveryDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetManualDeliveryDetails">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a dataset containing all items delivered on a specific date to a single store</wsdl:documentation>
+      <wsdl:input message="tns:GetManualDeliveryDetailsSoapIn" />
+      <wsdl:output message="tns:GetManualDeliveryDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="isConnectionActive">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns 1. If the calling application receives a 1, we can presume we have a connection</wsdl:documentation>
+      <wsdl:input message="tns:isConnectionActiveSoapIn" />
+      <wsdl:output message="tns:isConnectionActiveSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBarcode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a product structure from the barcode value used within Rmis</wsdl:documentation>
+      <wsdl:input message="tns:CheckBarcodeSoapIn" />
+      <wsdl:output message="tns:CheckBarcodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckBarcode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a product structure from the barcode value used within Rmis. Checks for euro price based on branch number</wsdl:documentation>
+      <wsdl:input name="CheckBarcodeEuro" message="tns:CheckBarcodeEuroSoapIn" />
+      <wsdl:output name="CheckBarcodeEuro" message="tns:CheckBarcodeEuroSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBarcodesByProductName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of all barcodes / colours / sizes for a specific product</wsdl:documentation>
+      <wsdl:input message="tns:GetBarcodesByProductNameSoapIn" />
+      <wsdl:output message="tns:GetBarcodesByProductNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckService">
+      <wsdl:input message="tns:CheckServiceSoapIn" />
+      <wsdl:output message="tns:CheckServiceSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductWildcards">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a dataset with a list of product names (altcode1) and their description where the altcode1 begins with the wildcard phrase</wsdl:documentation>
+      <wsdl:input message="tns:SearchProductWildcardsSoapIn" />
+      <wsdl:output message="tns:SearchProductWildcardsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormats">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a dataset with a list of available label formats</wsdl:documentation>
+      <wsdl:input message="tns:GetLabelFormatsSoapIn" />
+      <wsdl:output message="tns:GetLabelFormatsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormatsByType">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a dataset with a list of label formats</wsdl:documentation>
+      <wsdl:input message="tns:GetLabelFormatsByTypeSoapIn" />
+      <wsdl:output message="tns:GetLabelFormatsByTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getLabelFormatType">
+      <wsdl:input message="tns:getLabelFormatTypeSoapIn" />
+      <wsdl:output message="tns:getLabelFormatTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a string with the formatting for a specific label format</wsdl:documentation>
+      <wsdl:input message="tns:GetLabelFormatSoapIn" />
+      <wsdl:output message="tns:GetLabelFormatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormatImage">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the image as a imagedata structure containing a byte array for a specific label format</wsdl:documentation>
+      <wsdl:input message="tns:GetLabelFormatImageSoapIn" />
+      <wsdl:output message="tns:GetLabelFormatImageSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormatName">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a string with the name of the label format from the ID number</wsdl:documentation>
+      <wsdl:input message="tns:GetLabelFormatNameSoapIn" />
+      <wsdl:output message="tns:GetLabelFormatNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertFormat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Creates a new label format in the system</wsdl:documentation>
+      <wsdl:input message="tns:InsertFormatSoapIn" />
+      <wsdl:output message="tns:InsertFormatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFormat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Modifies a label format within the system</wsdl:documentation>
+      <wsdl:input message="tns:UpdateFormatSoapIn" />
+      <wsdl:output message="tns:UpdateFormatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFormat">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Removes a label format from the system</wsdl:documentation>
+      <wsdl:input message="tns:DeleteFormatSoapIn" />
+      <wsdl:output message="tns:DeleteFormatSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReductions">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of reductions for the selected branch after the last reduction number</wsdl:documentation>
+      <wsdl:input message="tns:GetReductionsSoapIn" />
+      <wsdl:output message="tns:GetReductionsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReductionDetail">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of the barcodes, previous price and current price for each item in a given reduction.</wsdl:documentation>
+      <wsdl:input message="tns:GetReductionDetailSoapIn" />
+      <wsdl:output message="tns:GetReductionDetailSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReductionWithStockByBranch">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">New function for returning stock. Works out branch stock from head office</wsdl:documentation>
+      <wsdl:input message="tns:GetReductionWithStockByBranchSoapIn" />
+      <wsdl:output message="tns:GetReductionWithStockByBranchSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReductionWithStockByBranchWithAltCode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">New function for returning stock. Works out branch stock from head office</wsdl:documentation>
+      <wsdl:input message="tns:GetReductionWithStockByBranchWithAltCodeSoapIn" />
+      <wsdl:output message="tns:GetReductionWithStockByBranchWithAltCodeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRmisReductionIDFromReductionName">
+      <wsdl:input message="tns:GetRmisReductionIDFromReductionNameSoapIn" />
+      <wsdl:output message="tns:GetRmisReductionIDFromReductionNameSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReductionSheetNumbers">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns a list of the short reduction sheet numbers used in the shops. Taken from the shopNet database as these are not stored anywhere else.</wsdl:documentation>
+      <wsdl:input message="tns:GetReductionSheetNumbersSoapIn" />
+      <wsdl:output message="tns:GetReductionSheetNumbersSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchStockFromBarcode">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Returns the current in store availability as known by winRmis.</wsdl:documentation>
+      <wsdl:input message="tns:GetBranchStockFromBarcodeSoapIn" />
+      <wsdl:output message="tns:GetBranchStockFromBarcodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="LSXSoap" type="tns:LSXSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDeliveryDetails">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetDeliveryDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManualDeliveryDetails">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetManualDeliveryDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isConnectionActive">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/isConnectionActive" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBarcode">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/CheckBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBarcode">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/CheckBarcodeEuro" style="document" />
+      <wsdl:input name="CheckBarcodeEuro">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CheckBarcodeEuro">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBarcodesByProductName">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetBarcodesByProductName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckService">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/CheckService" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductWildcards">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/SearchProductWildcards" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormats">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetLabelFormats" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormatsByType">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetLabelFormatsByType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLabelFormatType">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/getLabelFormatType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormat">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetLabelFormat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormatImage">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetLabelFormatImage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormatName">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetLabelFormatName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFormat">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/InsertFormat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFormat">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/UpdateFormat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFormat">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/DeleteFormat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReductions">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetReductions" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReductionDetail">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetReductionDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReductionWithStockByBranch">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetReductionWithStockByBranch" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReductionWithStockByBranchWithAltCode">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetReductionWithStockByBranchWithAltCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRmisReductionIDFromReductionName">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetRmisReductionIDFromReductionName" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReductionSheetNumbers">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetReductionSheetNumbers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchStockFromBarcode">
+      <soap:operation soapAction="http://tempuri.org/LabelService/LSX/GetBranchStockFromBarcode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="LSXSoap12" type="tns:LSXSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDeliveryDetails">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetDeliveryDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetManualDeliveryDetails">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetManualDeliveryDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="isConnectionActive">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/isConnectionActive" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBarcode">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/CheckBarcode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckBarcode">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/CheckBarcodeEuro" style="document" />
+      <wsdl:input name="CheckBarcodeEuro">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="CheckBarcodeEuro">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBarcodesByProductName">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetBarcodesByProductName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckService">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/CheckService" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchProductWildcards">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/SearchProductWildcards" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormats">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetLabelFormats" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormatsByType">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetLabelFormatsByType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getLabelFormatType">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/getLabelFormatType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormat">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetLabelFormat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormatImage">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetLabelFormatImage" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLabelFormatName">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetLabelFormatName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertFormat">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/InsertFormat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateFormat">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/UpdateFormat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFormat">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/DeleteFormat" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReductions">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetReductions" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReductionDetail">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetReductionDetail" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReductionWithStockByBranch">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetReductionWithStockByBranch" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReductionWithStockByBranchWithAltCode">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetReductionWithStockByBranchWithAltCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRmisReductionIDFromReductionName">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetRmisReductionIDFromReductionName" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReductionSheetNumbers">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetReductionSheetNumbers" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBranchStockFromBarcode">
+      <soap12:operation soapAction="http://tempuri.org/LabelService/LSX/GetBranchStockFromBarcode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="LSX">
+    <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">This webservice contains all database functions required to operate the label it platform</wsdl:documentation>
+    <wsdl:port name="LSXSoap" binding="tns:LSXSoap">
+      <soap:address location="http://212.250.100.5/LabelService/LSX.asmx" />
+    </wsdl:port>
+    <wsdl:port name="LSXSoap12" binding="tns:LSXSoap12">
+      <soap12:address location="http://212.250.100.5/LabelService/LSX.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

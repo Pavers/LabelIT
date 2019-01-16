@@ -1,0 +1,4 @@
+- Create the folder C:\helpers
+- Copy in the Microsoft.Sqlhelper.dll
+- Open the solution file in bin\LabelIt.sln
+- The solution should build

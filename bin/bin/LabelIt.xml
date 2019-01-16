@@ -1,0 +1,709 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+LabelIt
+</name>
+</assembly>
+<members>
+<member name="T:LabelIt.LSX.LSX">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.#ctor">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetDeliveryDetailsCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetManualDeliveryDetailsCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.isConnectionActiveCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.CheckBarcodeCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.CheckBarcode1Completed">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetBarcodesByProductNameCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.CheckServiceCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.SearchProductWildcardsCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetLabelFormatsCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetLabelFormatsByTypeCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.getLabelFormatTypeCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetLabelFormatCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetLabelFormatImageCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetLabelFormatNameCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.InsertFormatCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.UpdateFormatCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.DeleteFormatCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetReductionsCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetReductionDetailCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetReductionWithStockByBranchCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetReductionWithStockByBranchWithAltCodeCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetRmisReductionIDFromReductionNameCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetReductionSheetNumbersCompleted">
+<remarks/>
+</member>
+<member name="E:LabelIt.LSX.LSX.GetBranchStockFromBarcodeCompleted">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetDeliveryDetails(System.DateTime,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetDeliveryDetails(System.DateTime,System.String,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetDeliveryDetails(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetDeliveryDetailsAsync(System.DateTime,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetDeliveryDetailsAsync(System.DateTime,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetManualDeliveryDetails(System.DateTime,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetManualDeliveryDetails(System.DateTime,System.String,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetManualDeliveryDetails(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetManualDeliveryDetailsAsync(System.DateTime,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetManualDeliveryDetailsAsync(System.DateTime,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.isConnectionActive">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginisConnectionActive(System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndisConnectionActive(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.isConnectionActiveAsync">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.isConnectionActiveAsync(System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.CheckBarcode(System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginCheckBarcode(System.String,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndCheckBarcode(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.CheckBarcodeAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.CheckBarcodeAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.CheckBarcode(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginCheckBarcode1(System.String,System.String,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndCheckBarcode1(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.CheckBarcode1Async(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.CheckBarcode1Async(System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetBarcodesByProductName(System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetBarcodesByProductName(System.String,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetBarcodesByProductName(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetBarcodesByProductNameAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetBarcodesByProductNameAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.CheckService">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginCheckService(System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndCheckService(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.CheckServiceAsync">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.CheckServiceAsync(System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.SearchProductWildcards(System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginSearchProductWildcards(System.String,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndSearchProductWildcards(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.SearchProductWildcardsAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.SearchProductWildcardsAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormats">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetLabelFormats(System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetLabelFormats(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatsAsync">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatsAsync(System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatsByType(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetLabelFormatsByType(System.Int32,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetLabelFormatsByType(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatsByTypeAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatsByTypeAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.getLabelFormatType(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BegingetLabelFormatType(System.Int32,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndgetLabelFormatType(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.getLabelFormatTypeAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.getLabelFormatTypeAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormat(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetLabelFormat(System.Int32,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetLabelFormat(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatImage(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetLabelFormatImage(System.Int32,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetLabelFormatImage(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatImageAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatImageAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatName(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetLabelFormatName(System.Int32,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetLabelFormatName(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatNameAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetLabelFormatNameAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.InsertFormat(System.Int32,System.String,System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginInsertFormat(System.Int32,System.String,System.String,System.Int32,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndInsertFormat(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.InsertFormatAsync(System.Int32,System.String,System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.InsertFormatAsync(System.Int32,System.String,System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.UpdateFormat(System.Int32,System.String,System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginUpdateFormat(System.Int32,System.String,System.String,System.Int32,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndUpdateFormat(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.UpdateFormatAsync(System.Int32,System.String,System.String,System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.UpdateFormatAsync(System.Int32,System.String,System.String,System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.DeleteFormat(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginDeleteFormat(System.Int32,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndDeleteFormat(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.DeleteFormatAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.DeleteFormatAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductions(System.Int32,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetReductions(System.Int32,System.String,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetReductions(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionsAsync(System.Int32,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionsAsync(System.Int32,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionDetail(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetReductionDetail(System.Int32,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetReductionDetail(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionDetailAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionDetailAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionWithStockByBranch(System.Int32,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetReductionWithStockByBranch(System.Int32,System.String,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetReductionWithStockByBranch(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionWithStockByBranchAsync(System.Int32,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionWithStockByBranchAsync(System.Int32,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionWithStockByBranchWithAltCode(System.Int32,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetReductionWithStockByBranchWithAltCode(System.Int32,System.String,System.String,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetReductionWithStockByBranchWithAltCode(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionWithStockByBranchWithAltCodeAsync(System.Int32,System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionWithStockByBranchWithAltCodeAsync(System.Int32,System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetRmisReductionIDFromReductionName(System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetRmisReductionIDFromReductionName(System.String,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetRmisReductionIDFromReductionName(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetRmisReductionIDFromReductionNameAsync(System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetRmisReductionIDFromReductionNameAsync(System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionSheetNumbers(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetReductionSheetNumbers(System.Int32,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetReductionSheetNumbers(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionSheetNumbersAsync(System.Int32)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetReductionSheetNumbersAsync(System.Int32,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetBranchStockFromBarcode(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.BeginGetBranchStockFromBarcode(System.String,System.String,System.AsyncCallback,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.EndGetBranchStockFromBarcode(System.IAsyncResult)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetBranchStockFromBarcodeAsync(System.String,System.String)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.GetBranchStockFromBarcodeAsync(System.String,System.String,System.Object)">
+<remarks/>
+</member>
+<member name="M:LabelIt.LSX.LSX.CancelAsync(System.Object)">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.Product">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.Product.ResponseCode">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.Product.ResponseMessage">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.Product.Name">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.Product.Description">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.Product.Colour">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.Product.Size">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.Product.qty">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.Product.Price">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.Product.RRP">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.Product.Was">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.ImageData">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.ImageData.Result">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.ImageData.Data">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetDeliveryDetailsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetDeliveryDetailsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetDeliveryDetailsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetManualDeliveryDetailsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetManualDeliveryDetailsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetManualDeliveryDetailsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.isConnectionActiveCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.isConnectionActiveCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.isConnectionActiveCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.CheckBarcodeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.CheckBarcodeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.CheckBarcodeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.CheckBarcode1CompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.CheckBarcode1CompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.CheckBarcode1CompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetBarcodesByProductNameCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetBarcodesByProductNameCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetBarcodesByProductNameCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.CheckServiceCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.CheckServiceCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.CheckServiceCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.SearchProductWildcardsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.SearchProductWildcardsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.SearchProductWildcardsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetLabelFormatsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetLabelFormatsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetLabelFormatsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetLabelFormatsByTypeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetLabelFormatsByTypeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetLabelFormatsByTypeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.getLabelFormatTypeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.getLabelFormatTypeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.getLabelFormatTypeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetLabelFormatCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetLabelFormatCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetLabelFormatCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetLabelFormatImageCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetLabelFormatImageCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetLabelFormatImageCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetLabelFormatNameCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetLabelFormatNameCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetLabelFormatNameCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.InsertFormatCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.InsertFormatCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.InsertFormatCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.UpdateFormatCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.UpdateFormatCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.UpdateFormatCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.DeleteFormatCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.DeleteFormatCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.DeleteFormatCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetReductionsCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetReductionsCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetReductionsCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetReductionDetailCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetReductionDetailCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetReductionDetailCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetReductionWithStockByBranchCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetReductionWithStockByBranchCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetReductionWithStockByBranchCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetReductionWithStockByBranchWithAltCodeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetReductionWithStockByBranchWithAltCodeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetReductionWithStockByBranchWithAltCodeCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetRmisReductionIDFromReductionNameCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetRmisReductionIDFromReductionNameCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetRmisReductionIDFromReductionNameCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetReductionSheetNumbersCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetReductionSheetNumbersCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetReductionSheetNumbersCompletedEventArgs.Result">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetBranchStockFromBarcodeCompletedEventHandler">
+<remarks/>
+</member>
+<member name="T:LabelIt.LSX.GetBranchStockFromBarcodeCompletedEventArgs">
+<remarks/>
+</member>
+<member name="P:LabelIt.LSX.GetBranchStockFromBarcodeCompletedEventArgs.Result">
+<remarks/>
+</member>
+</members>
+</doc>
