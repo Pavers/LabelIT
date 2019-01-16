@@ -53,3 +53,20 @@ C:\labelit\LabelIT\bin\obj\Debug\LabelIt.vbproj.CopyComplete
 C:\labelit\LabelIT\bin\obj\Debug\LabelIt.exe
 C:\labelit\LabelIT\bin\obj\Debug\LabelIt.xml
 C:\labelit\LabelIT\bin\obj\Debug\LabelIt.pdb
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\bin\LabelIt.exe.config
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\bin\LabelIt.exe
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\bin\LabelIt.pdb
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\bin\LabelIt.xml
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.vbprojAssemblyReference.cache
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.Form1.resources
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.frmAbout.resources
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.frmDownloadSale.resources
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.frmLookupProduct.resources
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.frmMain.resources
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.frmSetup.resources
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.vbproj.GenerateResource.cache
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.vbproj.CoreCompileInputs.cache
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.vbproj.CopyComplete
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.exe
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.xml
+C:\Users\Pavers IT\Documents\GitHub\LabelIT\bin\obj\Debug\LabelIt.pdb

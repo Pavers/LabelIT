@@ -342,12 +342,6 @@ Public Class frmSetup
 #End Region
 
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        If TextBox1.Text.Trim = "" Or TextBox2.Text.Trim = "" Then
-            MsgBox("Please supply all the information", MsgBoxStyle.Critical)
-            Exit Sub
-        End If
-
-
         SaveSetting("labelIt", "settings", "printer", TextBox2.Text)
         SaveSetting("labelIt", "settings", "wsx", TextBox1.Text)
         SaveSetting("labelIt", "settings", "branch", txtBranch.Text)
