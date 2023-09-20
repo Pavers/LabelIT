@@ -1,6 +1,6 @@
 # Instructions on how to run the application
 
-- This application is a Windows Forms Application, with the target framework being .NET 3.5. Your environment should be configured to be able to run this type of application.
+- This application is a Windows Forms Application written in VB.NET, with the target framework being .NET 3.5. Your environment should be configured to be able to run this type of application.
 
 - Create the folder C:\helpers and copy the Microsoft.Sqlhelper.dll into this folder
 - Open the solution file in bin\LabelIt.sln
